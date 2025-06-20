@@ -12,7 +12,7 @@ mini_erp/
 ├── plsql_procedures.sql - stored procedures (e.g., new order, stock transfer)
 ├── plsql_functions.sql - stored functions (e.g., warehouse usage)
 ├── test_calls.sql - test examples to call procedures/functions
-└── er_diagram.png - entity-relationship model
+├── er_diagram.png - entity-relationship model
 └── README.md - documentation
 ```
 

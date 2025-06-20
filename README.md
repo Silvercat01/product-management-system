@@ -5,14 +5,16 @@ A simplified ERP system built with Oracle SQL &amp; PL/SQL. Manages products, wa
 
 ## Project structure
 
+```
 mini_erp/
-│
-├── create_tables.sql
-├── insert_data.sql
-├── plsql_procedures.sql
-├── plsql_functions.sql
-├── test_calls.sql
-└── er_diagram.png
+├── create_tables.sql - all `CREATE TABLE` and sequence definitions
+├── insert_data.sql - initial data inserts
+├── plsql_procedures.sql - stored procedures (e.g., new order, stock transfer)
+├── plsql_functions.sql - stored functions (e.g., warehouse usage)
+├── test_calls.sql - test examples to call procedures/functions
+└── er_diagram.png - entity-relationship model
+└── README.md - documentation
+```
 
 ## Features
 

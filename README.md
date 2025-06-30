@@ -52,4 +52,4 @@ README.md - documentation
 4. Run schema/tables/`create_sequences.sql` as a script - creates the sequence used for automatically incrementing order IDs
 5. Run schema/initial_data/`insert_data.sql` as a script - inserts example data into each table, necessary for example queries, testing procedures and functions
 7. Run the files that contain procedures and functions found in the business logic folder - compiles the procedures and functions
-8. Finally, run the SQL queries found in the reports folder and run tests/`test_calls.sql` to test the PL-SQL procedures and functions as well
+8. Finally, run the SQL queries found in the reports folder and run tests/`test_calls.sql` to test the PL/SQL procedures and functions as well

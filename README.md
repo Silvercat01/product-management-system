@@ -7,12 +7,28 @@ A simplified ERP system built with Oracle SQL &amp; PL/SQL. Manages products, wa
 
 ```
 mini_erp/
-├── create_tables.sql - all `CREATE TABLE` and sequence definitions
-├── insert_data.sql - initial data inserts
-├── plsql_procedures.sql - stored procedures (e.g., new order, stock transfer)
-├── plsql_functions.sql - stored functions (e.g., warehouse usage)
-├── test_calls.sql - test examples to call procedures/functions
-└── er_diagram.png - entity-relationship model
+├── schema/
+│   ├── tables/
+│   │   ├── create_tables.sql
+│   │   ├── sequences.sql
+│   │   └── teardown.sql
+│   └── initial_data/
+│	    └── insert_data.sql
+├── business_logic/
+│   ├── inventory/
+│   │   ├── inventory_procedures.sql - 
+│   │   └── inventory_functions.sql
+│   ├── orders/
+│   │   └── order_procedures.sql
+│   └── customers/
+│       ├── customer_procedures.sql
+│       └── customer_functions.sql
+├── reports/
+│   ├── inventory_reports.sql
+│   ├── order_reports.sql
+│   └── customer_reports.sql
+└── tests/
+    └── test_calls.sql
 README.md - documentation
 ```
 
@@ -23,7 +39,6 @@ README.md - documentation
 - Order processing and payment records
 - PL/SQL procedures (e.g. create order, transfer stock)
 - PL/SQL functions (e.g. calculate warehouse usage)
-- Entity-relationship visualization using [dbdiagram.io](https://dbdiagram.io)
 
 ## Requirements
 
@@ -32,7 +47,9 @@ README.md - documentation
 
 ## Usage
 1. Download or clone the repository
-2. Run `create_tables.sql` as a script
-3. Run `insert_data.sql` as a script
-4. Run `plsql_functions.sql` and `plsql_procedures.sql`
-5. Finally, run `test_calls.sql` to test the procedures/functions
+2. Run schema/tables/`teardown.sql` as a script - it makes sure to erase all previously created tables and sequences (it's not necessary if you set up the database for the first time)
+3. Run schema/tables/`create_tables.sql` as a script - creates the basic structure of the tables, primary key and foreign key constraints
+4. Run schema/tables/`create_sequences.sql` as a script - creates the sequence used for automatically incrementing order IDs
+5. Run schema/initial_data/`insert_data.sql` as a script - inserts example data into each table, necessary for example queries, testing procedures and functions
+7. Run the files that contain procedures and functions found in the business logic folder - compiles the procedures and functions
+8. Finally, run the SQL queries found in the reports folder and run tests/`test_calls.sql` to test the PL-SQL procedures and functions as well

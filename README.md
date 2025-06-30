@@ -1,5 +1,5 @@
 # product-management-system
-A simplified ERP system built with Oracle SQL &amp; PL/SQL. Manages products, warehouses, orders, and customers.
+A simplified ERP (Enterprise Resource Planning) system built with Oracle SQL &amp; PL/SQL. Manages products, warehouses, orders, and customers.
 
 **Note:** All table names, column names, comments, and code logic use **Hungarian** naming conventions
 
